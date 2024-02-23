@@ -120,7 +120,6 @@ bool D3DClass::Initialize(int screenWidth, int screenHeight, bool vsync, HWND hw
 		return false;
 	}
 
-	//////////////////////////////////////////////////////////////////////////////////////////////////////////
 	ofstream outputFile("videoname.txt"); // Open the file for writing
 	if (!outputFile.is_open()) { // Check if file opening failed
 		std::cerr << "Failed to open file " << "videoname.txt" << " for writing." << std::endl;
@@ -130,7 +129,6 @@ bool D3DClass::Initialize(int screenWidth, int screenHeight, bool vsync, HWND hw
 	outputFile << "Video Card Name: " << m_videoCardDescription << std::endl;
 	// Close the file
 	outputFile.close();
-	//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	// Release the display mode list.
 	delete[] displayModeList;
